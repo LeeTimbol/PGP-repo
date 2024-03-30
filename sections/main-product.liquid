@@ -771,6 +771,76 @@
       }
     </script>
   </div>
+
+  <div class="page-width">
+    <div class="product-description">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'product-info' -%}
+            <div class="tab">
+              {% liquid
+                assign outline = block.settings.topic_outline
+                assign inclusions = block.settings.inclusions
+                assign instructions = block.settings.instructions
+                assign additional_info = block.settings.additional_info
+                assign outline_field = product.metafields.custom.topic_outline
+                assign inclusions_field = product.metafields.custom.inclusions
+                assign instructions_field = product.metafields.custom.instructions
+                assign additional_info_field = product.metafields.custom.addition_info
+              %}
+              {%  if outline and  outline_field%} <button class="tablinks" onclick="openInfo(event, 'outline')">Topic Outline</button> {% endif %}
+              {%  if inclusions and  inclusions_field%}<button class="tablinks" onclick="openInfo(event, 'inclusions')">Inclusions</button>{% endif %}
+              {%  if additional_info and  additional_info_field%}<button class="tablinks" onclick="openInfo(event, 'additional_info')">Additional Info</button>{% endif %}
+              {%  if instructions and  instructions_field%}<button class="tablinks" onclick="openInfo(event, 'instructions')">Instructions</button>{% endif %}
+            </div>
+              {%  if outline and  outline_field%}
+              <div id="outline" class="tabcontent">
+                {{ outline_field }} 
+              </div>
+            {% endif %}
+            {%  if inclusions and  inclusions_field%}
+              <div id="inclusions" class="tabcontent">
+                {{ inclusions_field }} 
+              </div>
+            {% endif %}
+            {%  if additional_info and  additional_info_field%}
+              <div id="additional_info" class="tabcontent">
+                {{ additional_info_field }} 
+              </div>
+            {% endif %}
+            {%  if instructions and  instructions_field%}
+              <div id="instructions" class="tabcontent">
+                {{ instructions_field }} 
+              </div>
+            {% endif %}
+            <script>
+              function openInfo(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              function clickFirstTab() {
+                var firstTab = document.querySelector('.tablinks');
+                if (firstTab) {
+                  firstTab.click(); 
+                }
+              }
+              document.addEventListener('DOMContentLoaded', function() {
+                clickFirstTab();
+              });
+              </script>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
 </section>
 
 {% schema %}
@@ -848,6 +918,36 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.sku.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "product-info",
+      "name": "Product Info",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "topic_outline",
+          "label": "Show Topic Outline ",
+          "default": true
+        },        {
+          "type": "checkbox",
+          "id": "additional_info",
+          "label": "Show Additional Info",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "inclusions",
+          "label": "Show Inclusions",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "instructions",
+          "label": "Show Instructions",
+          "default": true
         }
       ]
     },

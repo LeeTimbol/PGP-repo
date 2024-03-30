@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    font-family: "Outfit", sans-serif;
+  }
+
+  /* Product Page */
+.product__title h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 42px;
+}
+.jdgm-prev-badge__text {
+    margin-left: 8px!important;
+    color: #b3b3b3;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.jdgm-prev-badge__text:before {
+    content:"("
+}
+.jdgm-prev-badge__text:after {
+    content:")"
+}
+.template-product .price-item.price-item--sale, .template-product .price-item.price-item--regular {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 50px;
+}
+.template-product .price--on-sale .price-item--regular {
+    font-weight: 400;
+    font-size: 26px!important;
+    color: #b3b3b3;
+    opacity:0.8;
+}
+.price.price--large.price--on-sale {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.price--on-sale .price__sale {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.product__description.rte {
+    border-top: 2px solid #b3b3b37a;
+    margin-top: 0;
+    padding-top: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid #b3b3b37a;
+}
+.product-form__submit.button, .shopify-payment-button__button {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    width: 50%;
+}
+.product-form__submit.button:hover, .shopify-payment-button__button:hover {
+    transition: all 0.3s ease-in-out; 
+    transform: scale(1.02);
+ }
+ .product-form__submit.button, .shopify-payment-button__button {
+    transition: all 0.4s ease-in-out; 
+ }
+ .product-form__submit.button:hover, .shopify-payment-button__button:hover {
+    transition: all 0.3s ease-in-out; 
+    transform: scale(1.02);
+ }
+ .product-form__submit.button, .shopify-payment-button__button {
+    transition: all 0.4s ease-in-out; 
+ }
+ 
+ .thumbnail[aria-current] {
+     box-shadow: 0 0 0 .1rem rgb(var(--color-button));
+     border-color: rgb(var(--color-button));
+    padding:2px;
+ }
+ .thumbnail-list__item.slider__slide {
+     min-height: 80px;
+ }
+ 
+ button.slider-button.slider-button--prev, button.slider-button.slider-button--next {
+     width: 40px;
+ }
+ .slider-button svg.icon.icon-caret {
+     width: 50px;
+     height: 50px;
+     color: rgb(var(--color-button));
+ }
+.product__description.rte {color: rgb(var(--color-foreground));font-size: 16px;line-height: 24px;font-weight: 500;text-align: justify;}
+.product-form__submit.button:hover, .shopify-payment-button__button:hover {
+    transition: all 0.3s ease-in-out; 
+    transform: scale(1.02);
+ }
+ .product-form__submit.button, .shopify-payment-button__button {
+    transition: all 0.4s ease-in-out; 
+ }
+ 
+ .thumbnail[aria-current] {
+     box-shadow: 0 0 0 .1rem rgb(var(--color-button));
+     border-color: rgb(var(--color-button));
+    padding:2px;
+ }
+ .thumbnail-list__item.slider__slide {
+     min-height: 80px;
+ }
+ 
+ button.slider-button.slider-button--prev, button.slider-button.slider-button--next {
+     width: 40px;
+ }
+ .slider-button svg.icon.icon-caret {
+     width: 50px;
+     height: 50px;
+     color: rgb(var(--color-button));
+ }
+ 
+ .product-description {
+     margin-top: 90px;
+     padding-bottom: 15px;
+     border-bottom: 2px solid #b3b3b37a;
+     margin-bottom:50px
+ }
+ 
+ button.tablinks {
+     background: unset;
+     border: unset;
+     text-transform: uppercase;
+     font-size: 18px;
+     color: rgb(var(--color-foreground));
+     font-weight: 600;
+     cursor: pointer;
+     padding: 1rem;
+ }
+ button.tablinks:hover {
+     color: rgb(var(--color-button));
+ }
+ button.tablinks.active {
+     color: #fff;
+     background:rgb(var(--color-button));
+     border-radius: 5px 5px 0 0;
+     transition: all 0.5s ease-in-out;
+ }
+ .tab {
+     border-bottom: 2px solid #b3b3b37a;
+     margin-top: 0;
+     margin-bottom: 30px;
+ }
+ 
+ .tabcontent {
+     color: rgb(var(--color-foreground));
+     font-weight:400;
+     font-size:16px;
+     line-height:22px
+       -webkit-animation: fadeEffect 1s;
+   animation: fadeEffect 1s;
+ }
+ @-webkit-keyframes fadeEffect {
+   from {opacity: 0;}
+   to {opacity: 1;}
+ }
+ 
+ @keyframes fadeEffect {
+   from {opacity: 0;}
+   to {opacity: 1;}
+ }
+/* End of Product Page */
+
+@media only screen and (max-width: 580px) {
+
+}
