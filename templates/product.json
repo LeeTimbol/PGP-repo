@@ -58,6 +58,15 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "product_info_AfjqYg": {
+          "type": "product-info",
+          "settings": {
+            "topic_outline": true,
+            "additional_info": true,
+            "inclusions": true,
+            "instructions": true
+          }
         }
       },
       "block_order": [
@@ -69,7 +78,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "share"
+        "share",
+        "product_info_AfjqYg"
       ],
       "settings": {
         "enable_sticky_info": true,
