@@ -155,6 +155,9 @@
               {{ card_product.title | escape }}
             </a>
           </h3>
+            <div class='jdgm-widget jdgm-preview-badge collection-star'>
+              {{ card_product.metafields.judgeme.badge }}
+            </div>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
