@@ -4,6 +4,35 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_MbU3Np": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_8.png",
+            "image_width": 120,
+            "alignment": ""
+          }
+        },
+        "link_list_TpG4KA": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "link_list_AqTEPT": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "image_MbU3Np",
+        "link_list_TpG4KA",
+        "link_list_AqTEPT"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
