@@ -66,21 +66,22 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     font-size: 16px;
     width: 50%;
 }
-.product-form__submit.button:hover, .shopify-payment-button__button:hover {
-    transition: all 0.3s ease-in-out; 
-    transform: scale(1.02);
- }
- .product-form__submit.button, .shopify-payment-button__button {
+ .product-form__submit.button, .shopify-payment-button__button, .jdgm-btn.jdgm-btn--solid.jdgm-submit-rev {
     transition: all 0.4s ease-in-out; 
  }
- .product-form__submit.button:hover, .shopify-payment-button__button:hover {
+ .product-form__submit.button:hover, .shopify-payment-button__button:hover, .jdgm-btn.jdgm-btn--solid.jdgm-submit-rev:hover, a.jdgm-btn.jdgm-btn--border.jdgm-cancel-rev:hover {
     transition: all 0.3s ease-in-out; 
     transform: scale(1.02);
+    opacity:1;
  }
- .product-form__submit.button, .shopify-payment-button__button {
-    transition: all 0.4s ease-in-out; 
- }
- 
+ a.jdgm-btn.jdgm-btn--border.jdgm-cancel-rev {
+    border-color: rgb(var(--color-button))!important;
+    color: rgb(var(--color-button))!important;
+}
+.jdgm-form input[type="text"]:focus, .jdgm-form input[type="text"]:focus-visible, .jdgm-form input[type="email"]:focus, .jdgm-form input[type="email"]:focus-visible, .jdgm-form input[type="url"]:focus, .jdgm-form input[type="url"]:focus-visible, .jdgm-form textarea:focus, .jdgm-form textarea:focus-visible {
+    border-color: rgb(var(--color-button))!important;
+}
+
  .thumbnail[aria-current] {
      box-shadow: 0 0 0 .1rem rgb(var(--color-button));
      border-color: rgb(var(--color-button));
@@ -161,7 +162,7 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
      color: rgb(var(--color-foreground));
      font-weight:300;
      font-size:16px;
-     line-height:22px
+     line-height:22px;
        -webkit-animation: fadeEffect 1s;
    animation: fadeEffect 1s;
  }
@@ -177,7 +178,7 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
  }
  .jdgm-rev-widg__title {
     font-weight: 700!important;
-    font-size: 26px!important;
+    font-size: 24px!important;
     text-align: start!important;
 }
 
@@ -212,18 +213,20 @@ span.jdgm-rev-widg__summary-average {
     border: unset!important;
 }
 
-a.jdgm-write-rev-link {
+a.jdgm-write-rev-link, .jdgm-btn.jdgm-btn--solid.jdgm-submit-rev {
     background: rgb(var(--color-button))!important;
     transition: all 0.3s ease-in-out!important;
     border: 2px solid rgb(var(--color-button))!important;
 }
-a.jdgm-write-rev-link:hover {
+a.jdgm-write-rev-link:hover{
     background: #fff!important;
     opacity:1!important;
     color: rgb(var(--color-button))!important;
     transition: all 0.3s ease-in-out!important;
 }
-
+.jdgm-form__title, .jdgm-form__fieldset label {
+    color: #000!important;
+}
 .jdgm-row-actions {
     border: unset!important;
 }
@@ -300,8 +303,224 @@ b.jdgm-rev__title {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+.card__information {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-information {
+    text-align: center;
+}
+
+.card__heading {
+    text-align: center;
+    font-weight: 700;
+    width: 85%;
+    margin: auto;
+    font-size: 14px;
+}
+
+.price-item.price-item--regular {
+    font-size: 16px;
+    font-weight: 500;
+}
+.tab {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+}
+.tab::-webkit-scrollbar {
+    display: none;
+}
+.mobile-slider {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.slick-dots li button:before {
+    content: ''!important;
+    background: rgb(var(--color-button));
+    height: 5px!important;
+    border-radius: 50px;
+}
+
+.slick-dots li.slick-active button:before {
+    width: 30px!important;
+}
+
+.slick-dots .slick-active button, .slick-dots li.slick-active  {
+    width: 30px!important;
+}
+.card-information .price.price--on-sale, .card-information .price {
+    text-align: center;
+}
+.collection-star .jdgm-prev-badge {
+    display: flex!important;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.jdgm-star.jdgm--on:before {
+    font-size: 14px!important;
+}
+
+span.jdgm-prev-badge__text {
+    font-size: 14px!important;
+    padding-left: 3%;
+}
+summary.facets__summary.caption-large, #verticalTitle {
+    color: rgb(var(--color-foreground));
+    font-weight: 700;
+    font-size: 16px;
+}
+
+span.facet-checkbox__text, span.facets__selected {
+    color: rgb(var(--color-foreground));
+     font-weight: 500;
+}
+
+.facets-vertical .facet-checkbox input[type=checkbox] {
+    color: #0E045F;
+    border-color: #0E045F;
+    border: 1px solid #0E045F;;
+}
+
+#verticalTitle{
+    font-size: 18px;
+}
+
+input#Filter-Price-GTE, input#Filter-Price-LTE, .active-facets__button-inner.button.button--tertiary {
+    border: 1px solid #0E045F;
+    margin: 0!important;
+}
+a.underlined-link{
+    background: rgba(var(--color-link), var(--alpha-link));
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 3px 15px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-radius: 50px;
+     border:1px solid rgba(var(--color-link), var(--alpha-link));
+    transition:all 0.3s ease-in-out;
+}
+
+a.underlined-link:hover{
+    color: rgba(var(--color-link), var(--alpha-link));
+    background: #fff;
+    border:1px solid rgba(var(--color-link), var(--alpha-link));
+    transition:all 0.3s ease-in-out;
+}
+
 /* End of Product Page */
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 980px) {
+    .product__title h1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    .template-product .product__info-wrapper .price--on-sale .price-item--regular {
+        font-size: 18px!important;
+        line-height: 22px;
+    }
+    
+    .template-product .product__info-wrapper .price-item.price-item--sale, .template-product .product__info-wrapper .price-item.price-item--regular {
+        font-size: 22px;
+        line-height: 24px;
+    }
+    
+    .product__description.rte {
+        font-size: 14px;
+    }
+    
+    .product-form__submit.button, .shopify-payment-button__button {
+        width: 100%;
+    }
+    .page-width {
+        padding: 0 3.5rem!important;
+    }
+    .product__description.rte {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin: 0;
+    }
+    .product-description {
+        margin-top: 30px;
+    }
+    .tabcontent {
+        font-size: 14px;
+    }
+    .tabcontent h2 {
+        font-size: 18px;
+    }
+    .jdgm-rev-widg__title {
+        font-size: 22px!important;
+        text-align: center!important;
+    }
+    .jdgm-row-stars {
+        align-items: center!important;
+        justify-content: start!important;
+        flex-direction: column!important;
+        flex-wrap: wrap!important;
+    }
+    .jdgm-histogram {
+        width: 100%!important;
+        display: flex!important;
+        flex-direction: column!important;
+        align-items: center!important;
+        justify-content: center!important;
+        align-content: center!important;
+        flex-wrap: wrap!important;
+    }
+    .jdgm-rev-widg__summary-text {
+        color: #000!important;
+        font-size: 14px!important;
+        margin-top: 5px!important;
+    }
+    .jdgm-form__title {
+        font-size: 22px !important;
+        font-weight: 600 !important;
+    }
+    .jdgm-form__fieldset label {
+        font-size: 14px;
+    }
+    .jdgm-form__fieldset p {
+        font-size: 14px;
+        color: #000;
+    }
+    .related-products__heading {
+        font-size: 24px;
+    }
+    
+}
 
+@media only screen and (max-width: 580px) {
+    .related-products__heading {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .product__title h1 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .slick-dots li.slick-active button:before {
+        width: 25px!important;
+    }
+    .slick-dots .slick-active button, .slick-dots li.slick-active  {
+        width: 25px!important;
+    }
+    .slider-button svg.icon.icon-caret {
+        width: 15px;
+        height: 15px;
+    }
+    .card__heading {
+        width: 100%;
+    }
 }
