@@ -25,9 +25,125 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  p.footer__description {
+    color: {{ section.settings.text_color}};
+    font-weight:500;
+    width:90%
+}
+.list-social__link {
+  color: {{ section.settings.text_color}};
+  padding: 0;
+  margin-right: 15px;
+}
+.list-social__item .icon {
+    height: 25px;
+    width: 25px;
+}
+.footer-block__image-wrapper {
+    margin-bottom: 0;
+}
+.list-social {
+    justify-content: flex-start!important;
+}
+h2.footer-block__heading.inline-richtext {
+    color: {{ section.settings.text_color2}};
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.footer-block.grid__item.footer-block--menu:nth-child(2) ul.footer-block__details-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    align-items: start;
+}
+.footer-block__details-content .list-menu__item--link {
+    font-size: 16px;
+    font-weight: 500;
+    color: {{ section.settings.text_color}};
+}
+.list-social__link:hover{
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+  color: {{ section.settings.text_color2}};
+}
+.footer-block__details-content .list-menu__item--link:hover, .copyright__content a:hover, .image_email:hover, p.image_email a:hover {
+  color: {{ section.settings.text_color2}};
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+p.image_email {
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 15px 15px;
+    line-height: 20px;
+    text-decoration:none;
+}
+p.image_email a{
+  color: #fff;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration:none;
+}
+
+.footer__content-top {
+    padding: 3rem 2rem;
+}
+img.paymentgateway {
+    margin-top: 1.5rem;
+}
+.email_icon, .phone_icon, .map_icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.footer__content-bottom-wrapper.page-width {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer__copyright.caption {
+    color: {{ section.settings.text_color}};
+    font-weight: 700;
+}
+
+small.copyright__content {
+    font-size: 14px;
+}
+img.image_email, img.image_phone, img.omage_map {
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 980px){
+.grid--4-col-tablet .grid__item {
+    width: calc(50% - var(--grid-desktop-horizontal-spacing)* 3 / 4);
+}
+}
+@media screen and (max-width: 580px){
+.grid--4-col-tablet .grid__item {
+    width: calc(100% - var(--grid-desktop-horizontal-spacing)* 3 / 4);
+}
+.footer-block__details-content {
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+}
+
+.footer-block.grid__item {
+    margin:2rem 0;
+}
+.footer-block__heading {
+    margin-bottom: 1rem;
+}
+p.footer__description {
+    width: 100%;
+}
+}
+
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" style="background-color: {{ section.settings.background }}">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -100,6 +216,30 @@
                         {%- endfor -%}
                       </ul>
                     {%- endif -%}
+                    {%- when 'contact_info' -%}
+                      {%- if block.settings.email != blank or block.settings.phone != blank or block.settings.map != blank-%}
+                        {%- if block.settings.contact_heading != blank -%}
+                          <h2 class="footer-block__heading inline-richtext">{{- block.settings.contact_heading -}}</h2>
+                        {%- endif -%}
+                        {%- if block.settings.email -%}
+                          <div class="email_icon">          
+                            <img src="{{ block.settings.image_email | image_url }}" alt="" class="image_email">
+                            <p class="image_email"><a href="mailto:{{ block.settings.email }}">{{ block.settings.email }}</a></p>
+                          </div>
+                        {%- endif -%}
+                        {%- if block.settings.phone -%}
+                          <div class="phone_icon">          
+                            <img src="{{ block.settings.phone_email | image_url }}" alt="" class="image_phone">
+                            <p class="image_email"><a href="tel:{{ block.settings.phone }}"> {{ block.settings.phone }}</a></p>
+                          </div>
+                        {%- endif -%}
+                        {%- if block.settings.map -%}
+                          <div class="map_icon">          
+                            <img src="{{ block.settings.address_email | image_url }}" alt="" class="image_map">
+                            <p class="image_email"> {{ block.settings.map }} </p>
+                          </div>
+                        {%- endif -%}
+                      {%- endif -%}
                   {%- when 'brand_information' -%}
                     <div class="footer-block__brand-info">
                       {%- if settings.brand_image != blank -%}
@@ -119,6 +259,7 @@
                               height: brand_image_height,
                               width: settings.brand_image_width
                           }}
+
                         </div>
                       {%- endif -%}
                       {%- if settings.brand_headline != blank -%}
@@ -152,6 +293,12 @@
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {%- endif -%}
                     </div>
+                    {%- if block.settings.footer_description != blank -%}
+                      <p class="footer__description"> {{ block.settings.footer_description }} </p>
+                    {%- endif -%}
+                    {%- if section.settings.show_social and has_social_icons -%}
+                      {%- render 'social-icons', class: 'footer__list-social' -%}
+                    {%- endif -%}
                 {%- endcase -%}
               </div>
             {%- endfor -%}
@@ -236,10 +383,6 @@
               {{ shop | login_button: action: 'follow' }}
               {% # theme-check-enable %}
             </div>
-          {%- endif -%}
-
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
         </div>
       </div>
@@ -334,8 +477,8 @@
         {%- endif -%}
       </div>
       <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
+        {% comment %} {%- if section.settings.payment_enable -%}
+          {% comment %} <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
             <ul class="list list-payment" role="list">
               {%- for type in shop.enabled_payment_types -%}
@@ -344,17 +487,18 @@
                 </li>
               {%- endfor -%}
             </ul>
-          </div>
-        {%- endif -%}
+          </div> {% endcomment %}
+          <img src="https://cdn.shopify.com/s/files/1/0627/7319/8941/files/payments.png?v=1712061827" alt="" class="paymentgateway">
+        {%- endif -%} {% endcomment %}
       </div>
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          >&copy; {{ 'now' | date: '%Y' }}, JBHENSON.
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
-        {%- if section.settings.show_policy -%}
+        <small class="copyright__content">ALL RIGHTS RESERVED</small>
+        {% comment %} {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
@@ -366,7 +510,10 @@
               {%- endif -%}
             {%- endfor -%}
           </ul>
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
+      </div>
+      <div class="footer__payment--gateway">
+        <img src="https://cdn.shopify.com/s/files/1/0627/7319/8941/files/payments.png?v=1712061827" alt="" class="paymentgateway">
       </div>
     </div>
   </div>
@@ -378,6 +525,52 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "contact_info",
+      "name": "Contact Information",
+      "settings": [
+        {
+          "type": "text",
+          "id": "contact_heading",
+          "default": "Contact",
+          "label": "Contact Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "email",
+          "default": "jbhenson.cpa@gmail.com",
+          "label": "Email"
+        },
+        {
+          "type": "textarea",
+          "id": "phone",
+          "default": "09123456789",
+          "label": "Phone Number"
+        },
+        {
+          "type": "textarea",
+          "id": "map",
+          "default": "A. Mabini St., San Nicolas Poblacion, Concepcion, Tarlac",
+          "label": "Address"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_email",
+          "label": "Email Image"
+        }
+        ,
+        {
+          "type": "image_picker",
+          "id": "phone_email",
+          "label": "Phone Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "address_email",
+          "label": "Address Image"
+        }
+      ]
     },
     {
       "type": "link_list",
@@ -447,6 +640,11 @@
           "label": "Image"
         },
         {
+          "type": "textarea",
+          "id": "footer_description",
+          "label": "Footer Description"
+        },
+        {
           "type": "range",
           "id": "image_width",
           "min": 50,
@@ -485,6 +683,24 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Section Background",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text_color2",
+      "label": "Secondary Text Color",
+      "default": "#FBC60A"
     },
     {
       "type": "header",

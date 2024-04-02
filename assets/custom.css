@@ -417,7 +417,6 @@ a.underlined-link:hover{
     border:1px solid rgba(var(--color-link), var(--alpha-link));
     transition:all 0.3s ease-in-out;
 }
-
 /* End of Product Page */
 
 @media only screen and (max-width: 980px) {
@@ -502,6 +501,9 @@ a.underlined-link:hover{
 }
 
 @media only screen and (max-width: 580px) {
+    .page-width {
+        padding: 0 1.5rem !important;
+    }
     .related-products__heading {
         text-align: center;
         margin-bottom: 0;
