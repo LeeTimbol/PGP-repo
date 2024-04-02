@@ -43,6 +43,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Group_8.png",
+            "footer_description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet.",
             "image_width": 120,
             "alignment": ""
           }
@@ -57,18 +58,34 @@
         "link_list_AqTEPT": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Polices",
+            "menu": "footer-policies"
+          }
+        },
+        "contact_info_xi8TQk": {
+          "type": "contact_info",
+          "settings": {
+            "contact_heading": "Contact",
+            "email": "jbhenson.cpa@gmail.com",
+            "phone": "09123456789",
+            "map": "A. Mabini St., San Nicolas Poblacion, Concepcion, Tarlac",
+            "image_email": "shopify:\/\/shop_images\/Group_4.png",
+            "phone_email": "shopify:\/\/shop_images\/Group_4_1.png",
+            "address_email": "shopify:\/\/shop_images\/Group_4_2.png"
           }
         }
       },
       "block_order": [
         "image_MbU3Np",
         "link_list_TpG4KA",
-        "link_list_AqTEPT"
+        "link_list_AqTEPT",
+        "contact_info_xi8TQk"
       ],
       "settings": {
         "color_scheme": "scheme-1",
+        "background": "#000",
+        "text_color": "#fff",
+        "text_color2": "#FBC60A",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
