@@ -31,6 +31,8 @@
       ],
       "settings": {
         "color_scheme": "",
+        "background_image": "shopify:\/\/shop_images\/Frame_76.png",
+        "side_image": "shopify:\/\/shop_images\/Group_9.png",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
