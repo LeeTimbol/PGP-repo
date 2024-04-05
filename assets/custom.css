@@ -340,6 +340,11 @@ b.jdgm-rev__title {
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
+button.product-form__submit.button {
+    color: #fff;
+    background: rgb(var(--color-button-text));
+}
+
 .slick-dots li button:before {
     content: ''!important;
     background: rgb(var(--color-button));
