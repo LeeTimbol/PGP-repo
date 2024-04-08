@@ -7,23 +7,55 @@
       padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
     }
   }
+  .collection-hero--with-image{
+    background-image: url('{{collection.image | image_url }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height:25vh;
+  }
+  .collection-hero--with-image .collection-hero__title {
+    color: {{ section.settings.text_color }};
+    font-weight: 500;
+  }
+  nav.breadcrumbs a {
+    color: {{ section.settings.text_color }};
+    font-weight: 500;
+    text-decoration: none;
+  }
+  nav.breadcrumbs i {
+    color: {{ section.settings.text_color }};
+      font-weight: 300;
+      text-decoration: none;
+      margin:0 5px;
+  }
+
+  a.collection_breadcrumbs {
+      font-weight: 300!important;
+  }
 {%- endstyle -%}
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+      <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
-
+      {%- if section.settings.show_collection_breadcrumbs -%}
+        <nav class="breadcrumbs" aria-label="breadcrumbs">
+          <a class="home_breadcrumbs" href="/" title="Home">Home</a>
+          <i>/</i>
+          <a class="collection_breadcrumbs" title="{{ collection.title }}">{{ collection.title }}</a>
+        </nav>
+      {%- endif -%}
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
+      {% comment %} <div class="collection-hero__image-container media gradient">
         <img
           srcset="
             {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -40,7 +72,7 @@
           width="{{ collection.image.width }}"
           height="{{ collection.image.height }}"
         >
-      </div>
+      </div> {% endcomment %}
     {%- endif -%}
   </div>
 </div>
@@ -62,6 +94,12 @@
     },
     {
       "type": "checkbox",
+      "id": "show_collection_breadcrumbs",
+      "default": true,
+      "label": "Show Collection Breadcrumbs"
+    },
+    {
+      "type": "checkbox",
       "id": "show_collection_image",
       "default": false,
       "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
@@ -72,6 +110,12 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#fff"
     }
   ]
 }
