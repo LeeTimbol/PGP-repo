@@ -20,24 +20,24 @@
         "heading_zgLzaj": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Automate Your Books of Accounts & Tax Computations",
             "heading_size": "h1"
           }
         },
         "text_MR7G8V": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Input your data in the spreadsheet’s General Journal, General Ledger, Cash Receipts Journal, Cash Disbursement Journal, Subsidiary Sales Journal, Subsidiary Purchase Journal. Ready to copy on your manual books of accounts!",
             "text_style": "body"
           }
         },
         "buttons_eGTT9Y": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "Shop Now!",
             "button_link_1": "",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
@@ -50,11 +50,12 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame_1000006842.png",
+        "image_2": "shopify://shop_images/Hero_Banner_Image.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
+        "image_height": "large",
+        "desktop_content_position": "middle-left",
         "show_text_box": true,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
