@@ -20,21 +20,21 @@
         "heading_4pFQbU": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Automate Your Books of Accounts & Tax Computations",
             "heading_size": "h1"
           }
         },
         "text_zLz6j3": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Input your data in the spreadsheet’s General Journal, General Ledger, Cash Receipts Journal, Cash Disbursement Journal, Subsidiary Sales Journal, Subsidiary Purchase Journal. Ready to copy on your manual books of accounts!</p>",
             "text_style": "body"
           }
         },
         "button_AUmbx3": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Shop Now",
             "button_link": "",
             "button_style_secondary": false
           }
