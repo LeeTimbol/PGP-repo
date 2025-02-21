@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -15,13 +24,12 @@
         "paragraph_km8peC": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
           }
         },
         "email_form_VCbgfd": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -31,8 +39,6 @@
       ],
       "settings": {
         "color_scheme": "",
-        "background_image": "shopify:\/\/shop_images\/Frame_76.png",
-        "side_image": "shopify:\/\/shop_images\/Group_9.png",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -44,9 +50,9 @@
         "image_MbU3Np": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_8.png",
+            "image": "shopify://shop_images/JBH_-_LOGO__2_-removebg-preview.png",
             "footer_description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet.",
-            "image_width": 120,
+            "image_width": 200,
             "alignment": ""
           }
         },
@@ -61,7 +67,7 @@
           "type": "link_list",
           "settings": {
             "heading": "Polices",
-            "menu": "footer-policies"
+            "menu": ""
           }
         },
         "contact_info_xi8TQk": {
@@ -70,10 +76,7 @@
             "contact_heading": "Contact",
             "email": "jbhenson.cpa@gmail.com",
             "phone": "09123456789",
-            "map": "A. Mabini St., San Nicolas Poblacion, Concepcion, Tarlac",
-            "image_email": "shopify:\/\/shop_images\/Group_4.png",
-            "phone_email": "shopify:\/\/shop_images\/Group_4_1.png",
-            "address_email": "shopify:\/\/shop_images\/Group_4_2.png"
+            "map": "A. Mabini St., San Nicolas Poblacion, Concepcion, Tarlac"
           }
         }
       },
@@ -85,9 +88,9 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "background": "#000",
-        "text_color": "#fff",
-        "text_color2": "#FBC60A",
+        "background": "#000000",
+        "text_color": "#ffffff",
+        "text_color2": "#fbc60a",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
