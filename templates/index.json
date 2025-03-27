@@ -1,0 +1,510 @@
+{
+  "sections": {
+    "banner_slider_hcRWdK": {
+      "type": "banner_slider",
+      "blocks": {
+        "banner_slider_CUbtcR": {
+          "type": "banner_slider",
+          "settings": {
+            "image_background": "shopify:\/\/shop_images\/Frame_1000003438.png",
+            "heading": "Automate Your  Books of Accounts  & Tax Computations",
+            "description": "Input your data in the spreadsheet’s General Journal, General Ledger, Cash Receipts Journal, Cash Disbursement Journal, Subsidiary Sales Journal, Subsidiary Purchase Journal. Ready to copy on your manual books of accounts!",
+            "button_text": "SHOP NOW!",
+            "button_url": "shopify:\/\/collections\/templates",
+            "column_image": "shopify:\/\/shop_images\/Group_1000002860.png",
+            "column_alignment": "Left",
+            "image_alignment": "Right",
+            "background_color": "#0e035f",
+            "heading_color": "#ffffff",
+            "description_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_color": "#fbc60a"
+          }
+        },
+        "banner_slider_KL434n": {
+          "type": "banner_slider",
+          "settings": {
+            "image_background": "shopify:\/\/shop_images\/Frame_1000003438.png",
+            "heading": "Learn How To File Your Taxes & Comply On Your Own",
+            "description": "Review recorded video meetings and join our exclusive group chat for interaction",
+            "button_text": "SEE SCHEDULES!",
+            "button_url": "shopify:\/\/collections\/webinars",
+            "column_image": "shopify:\/\/shop_images\/Group_1000002860.png",
+            "column_alignment": "Left",
+            "image_alignment": "Left",
+            "background_color": "#0e035f",
+            "heading_color": "#ffffff",
+            "description_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_color": "#fbc60a"
+          }
+        }
+      },
+      "block_order": [
+        "banner_slider_CUbtcR",
+        "banner_slider_KL434n"
+      ],
+      "settings": {
+        "dots": true,
+        "Button_color": "#fbc60a",
+        "arrow_color": "#fbc60a"
+      }
+    },
+    "image_with_text_mJWbYt": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NryFRP": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_PXNNTc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized, we’ll replace this placeholder text with your real content.<\/p><p>Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.<\/p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "button_wJAPUz": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE!",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style_secondary": false,
+            "button_text_color": "#000000",
+            "button_background_color": "#fbc60a"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NryFRP",
+        "text_PXNNTc",
+        "button_wJAPUz"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_5s.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_tablet": 10,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 5
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "templates",
+        "products_to_show": 25,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_a7Lrw7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HWeyab": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pxXyXA": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jWNfJX": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HWeyab",
+        "column_pxXyXA",
+        "column_jWNfJX"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_eKYy3V": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "Blog posts",
+        "description": "Explore our collection of informative and engaging blog posts covering a range of topics.",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_tablet": 50,
+        "padding_bottom_tablet": 50,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "services_column_section_Mp3mft": {
+      "type": "services-column-section",
+      "blocks": {
+        "column_kqKpKA": {
+          "type": "column",
+          "settings": {
+            "column_image": "shopify:\/\/shop_images\/DTI_Services.png",
+            "icon_image": "shopify:\/\/shop_images\/Group_1000002851.png",
+            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_3.png",
+            "column_title": "DTI Services",
+            "column_link": "",
+            "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "description_color": "#000000",
+            "hover_text_color": "#ffffff"
+          }
+        },
+        "column_QEETWr": {
+          "type": "column",
+          "settings": {
+            "column_image": "shopify:\/\/shop_images\/BIR_Registration.png",
+            "icon_image": "shopify:\/\/shop_images\/Group_1000002851_1.png",
+            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_4.png",
+            "column_title": "BIR Registration",
+            "column_link": "",
+            "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "description_color": "#000000",
+            "hover_text_color": ""
+          }
+        },
+        "column_8EU6pq": {
+          "type": "column",
+          "settings": {
+            "column_image": "shopify:\/\/shop_images\/Bookkeeping.png",
+            "icon_image": "shopify:\/\/shop_images\/Group_1000002851_2.png",
+            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_5.png",
+            "column_title": "Bookkeeping",
+            "column_link": "",
+            "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "description_color": "#000000",
+            "hover_text_color": ""
+          }
+        },
+        "column_rEdncW": {
+          "type": "column",
+          "settings": {
+            "column_image": "shopify:\/\/shop_images\/Tax_Compliance.png",
+            "icon_image": "shopify:\/\/shop_images\/Group_42.png",
+            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_6.png",
+            "column_title": "Tax Compliance",
+            "column_link": "",
+            "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "description_color": "#000000",
+            "hover_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_kqKpKA",
+        "column_QEETWr",
+        "column_8EU6pq",
+        "column_rEdncW"
+      ],
+      "settings": {
+        "heading": "Our Firm Offers Various Services",
+        "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized.",
+        "button_text1": "VIEW ALL SERVICES",
+        "button_url1": "",
+        "button_text2": "BOOK NOW",
+        "button_url2": "",
+        "bg_color": "#f3f3f3",
+        "heading_color": "#000000",
+        "description_color": "#000000",
+        "button_text_color": "#000000",
+        "button_background_color": "#fbc60a",
+        "button_text_color2": "#000000",
+        "button_background_color2": "#fbc60a",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_tablet": 50,
+        "padding_bottom_tablet": 70,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "featured_collection_slider_43ETm4": {
+      "type": "featured-collection-slider",
+      "settings": {
+        "heading": "Featured Products",
+        "subheading": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized.",
+        "text_alignment": "Center",
+        "collection": "templates",
+        "button_text": "SHOP MORE!",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "button_text_color": "#000000",
+        "button_background_color": "#fbc60a",
+        "button_text_color_add": "#ffffff",
+        "button_background_color_add": "#0e035f",
+        "padding_top": 50,
+        "padding_bottom": 80,
+        "padding_top_tablet": 15,
+        "padding_bottom_tablet": 50,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "testimonials_slider_7JHiTY": {
+      "type": "testimonials-slider",
+      "blocks": {
+        "text_Ypcnbc": {
+          "type": "text",
+          "settings": {
+            "testimonial": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized, we’ll replace this placeholder text with your real content. Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.",
+            "testimonial_name": "John Doe",
+            "Testimonial_color": "#ffffff",
+            "Name_color": "#ffffff",
+            "testimonial_text_alignment": "Center"
+          }
+        },
+        "text_77fwqz": {
+          "type": "text",
+          "settings": {
+            "testimonial": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized, we’ll replace this placeholder text with your real content. Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.",
+            "testimonial_name": "Jane Doe",
+            "Testimonial_color": "#ffffff",
+            "Name_color": "#ffffff",
+            "testimonial_text_alignment": "Center"
+          }
+        },
+        "text_aXnaFe": {
+          "type": "text",
+          "settings": {
+            "testimonial": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized, we’ll replace this placeholder text with your real content. Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.",
+            "testimonial_name": "Sarah Doe",
+            "Testimonial_color": "#ffffff",
+            "Name_color": "#ffffff",
+            "testimonial_text_alignment": "Center"
+          }
+        }
+      },
+      "block_order": [
+        "text_Ypcnbc",
+        "text_77fwqz",
+        "text_aXnaFe"
+      ],
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Rectangle_4674.png",
+        "icon": "shopify:\/\/shop_images\/bxs_quote-right.png",
+        "Heading": "Testimonials",
+        "subheading": "",
+        "text_alignment": "Center",
+        "background_color": "#0e035f",
+        "heading_color": "#ffffff",
+        "subheading_color": "#ffffff",
+        "arrow_color": "#fbc60a",
+        "padding_top": 10,
+        "padding_bottom": 80,
+        "padding_top_tablet": 5,
+        "padding_bottom_tablet": 80,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "featured_blog_cei44X": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Our Blogs",
+        "description": "Explore our collection of informative and engaging blog posts covering a range of topics.",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 80,
+        "padding_bottom": 0,
+        "padding_top_tablet": 50,
+        "padding_bottom_tablet": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "cta_section_HdqQC3": {
+      "type": "cta-section",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Frame_1000006849.png",
+        "heading": "Reserve Your Consultation and Take the First Step",
+        "subheading": "",
+        "button_text": "BOOK A SCHEDULE",
+        "button_url": "",
+        "background_color": "#0e035f",
+        "heading_color": "#ffffff",
+        "subheading_color": "#ffffff",
+        "button_text_color": "#121212",
+        "button_color": "#fbc60a",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_tablet": 80,
+        "padding_bottom_tablet": 80,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50,
+        "margin_top": 80,
+        "margin_bottom": 80,
+        "margin_top_tablet": 0,
+        "margin_bottom_tablet": 50,
+        "margin_top_mobile": 60,
+        "margin_bottom_mobile": 0
+      }
+    },
+    "faq_section_rJWQ6E": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_section_PcBVJh": {
+          "type": "faq_section",
+          "settings": {
+            "faq_question": "Lorem ipsum dolor sit amet consectetur, adipisicing elit?",
+            "faq_answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nulla? Suscipit corrupti nemo consequuntur necessitatibus sunt perferendis, dolores consectetur itaque quas eum enim nulla, laborum laboriosam, provident commodi odit animi!"
+          }
+        },
+        "faq_section_4DcQWM": {
+          "type": "faq_section",
+          "settings": {
+            "faq_question": "Lorem ipsum dolor sit amet consectetur, adipisicing elit?",
+            "faq_answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nulla? Suscipit corrupti nemo consequuntur necessitatibus sunt perferendis, dolores consectetur itaque quas eum enim nulla, laborum laboriosam, provident commodi odit animi!"
+          }
+        },
+        "faq_section_qebNrR": {
+          "type": "faq_section",
+          "settings": {
+            "faq_question": "Lorem ipsum dolor sit amet consectetur, adipisicing elit?",
+            "faq_answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nulla? Suscipit corrupti nemo consequuntur necessitatibus sunt perferendis, dolores consectetur itaque quas eum enim nulla, laborum laboriosam, provident commodi odit animi!"
+          }
+        },
+        "faq_section_LbErnL": {
+          "type": "faq_section",
+          "settings": {
+            "faq_question": "Lorem ipsum dolor sit amet consectetur, adipisicing elit?",
+            "faq_answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nulla? Suscipit corrupti nemo consequuntur necessitatibus sunt perferendis, dolores consectetur itaque quas eum enim nulla, laborum laboriosam, provident commodi odit animi!"
+          }
+        },
+        "faq_section_AKUEEm": {
+          "type": "faq_section",
+          "settings": {
+            "faq_question": "Lorem ipsum dolor sit amet consectetur, adipisicing elit?",
+            "faq_answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nulla? Suscipit corrupti nemo consequuntur necessitatibus sunt perferendis, dolores consectetur itaque quas eum enim nulla, laborum laboriosam, provident commodi odit animi!"
+          }
+        }
+      },
+      "block_order": [
+        "faq_section_PcBVJh",
+        "faq_section_4DcQWM",
+        "faq_section_qebNrR",
+        "faq_section_LbErnL",
+        "faq_section_AKUEEm"
+      ],
+      "settings": {
+        "heading": "FAQ's",
+        "subheading": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized.",
+        "bg_color": "#f3f3f3",
+        "heading_color": "#121212",
+        "subheading_color": "#121212",
+        "question_color": "#121212",
+        "answer_color": "#121212",
+        "border_color": "#0e035f",
+        "padding_top": 20,
+        "padding_bottom": 30,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30
+      }
+    }
+  },
+  "order": [
+    "banner_slider_hcRWdK",
+    "image_with_text_mJWbYt",
+    "featured_collection",
+    "multicolumn_a7Lrw7",
+    "featured_blog_eKYy3V",
+    "services_column_section_Mp3mft",
+    "featured_collection_slider_43ETm4",
+    "testimonials_slider_7JHiTY",
+    "featured_blog_cei44X",
+    "cta_section_HdqQC3",
+    "faq_section_rJWQ6E"
+  ]
+}

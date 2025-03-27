@@ -1,0 +1,133 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  nav.breadcrumbs a {
+    color: {{ section.settings.heading_color }};
+    font-weight: 300;
+    text-decoration: none;
+  }
+  nav.breadcrumbs i {
+    color: {{ section.settings.heading_color }};
+      font-weight: 300;
+      text-decoration: none;
+      margin:0 5px;
+  }
+
+  a.collection_breadcrumbs {
+      font-weight: 200!important;
+  }
+  .new.main-page-title {
+    margin-bottom: 0;
+  }
+  .page-banner-container {
+    padding-top: 10rem!important;
+    padding-bottom: 10rem!important;
+  }
+  @media screen and (max-width: 980px) {
+    .page-banner-container {
+    padding-top: 7rem!important;
+    padding-bottom: 7rem!important;
+  }
+  }
+  @media screen and (max-width: 580px) {
+    .page-banner-container {
+      padding-top: 4rem!important;
+      padding-bottom: 4rem!important;
+    }
+    .contact-page__info {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .contact-page {
+        align-items: flex-start;
+    }
+  }
+{%- endstyle -%}
+<section class="page-banner" style="{% if section.settings.image_background != blank %}background-image: url('{{ section.settings.image_background | image_url }}'); {% else %} background: {{ section.settings.background_color }}; {% endif %}">
+<div class="page-banner-container page-width section-{{ section.id }}-padding">
+  <h1 style="color: {{ section.settings.heading_color }}" class="new main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ page.title | escape }}
+  </h1>
+  {%- if section.settings.show_collection_breadcrumbs -%}
+    <nav class="breadcrumbs" aria-label="breadcrumbs">
+      <a class="home_breadcrumbs" href="/" title="Home">Home</a>
+      <i>/</i>
+      <a class="collection_breadcrumbs" title="{{ page.title }}">{{ page.title | escape }}</a>
+    </nav>
+  {%- endif -%}
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content }}
+  </div>
+</div>
+</section>
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_background",
+      "label": "Image Background",
+      "info": "Note that Background image will be prioritized over background color if both has value"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_breadcrumbs",
+      "default": true,
+      "label": "Show Collection Breadcrumbs"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_tablet",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin Bottom Tablet",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin Bottom Mobile",
+      "default": 30
+    }
+  ]
+}
+{% endschema %}

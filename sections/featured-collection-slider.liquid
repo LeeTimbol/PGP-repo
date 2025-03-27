@@ -1,0 +1,273 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    .collection-slider {
+        padding-top:{{ section.settings.padding_top }}px;
+        padding-bottom:{{ section.settings.padding_bottom }}px;
+    }
+    .heading-all.collection-heading.h1 {
+        margin-bottom: 15px;
+    }
+
+    .description.collection-description {
+        width: 75%;
+        margin: auto;
+    }
+    .collection-slider-grid {
+        list-style-type: none;
+        width: 30%;
+        margin:15px;
+    }
+    .collection-slider-content {
+        margin-bottom: 25px;
+    }
+    .collection-slider-grid .card__information {
+        grid-row-start: 1;
+    }
+    .collection-slider .quick-add__submit {
+        background: {{ section.settings.button_background_color_add}};
+        border: none!important;
+        color: {{section.settings.button_text_color_add}};
+        border-radius:5px;
+        text-transform: uppercase;
+    }
+    .collection-slider .button:after,.collection-slider .button:not([disabled]):hover:after {
+        box-shadow: unset;
+    }
+    .collection-slider *:focus-visible {
+        outline: unset;
+        outline-offset: .3rem;
+        box-shadow: unset;
+    }
+    @media screen and (max-width: 980px) {
+        .collection-slider {
+        padding-top: {{ section.settings.padding_top_tablet }}px;
+        padding-bottom: {{ section.settings.padding_bottom_tablet }}px;
+        }
+        .collection__view-all {
+            margin-top: 15px;
+        }
+        .collection-slider-grid {
+            width: 48%;
+        }
+        .collection-slider .card__heading {
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .description.collection-description {
+            width: 95%;
+        }
+        .collection-slider-content {
+            margin-bottom: 15px;
+        }
+    }
+    @media screen and (max-width: 580px) {
+        .collection-slider {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+        }
+        .description.collection-description {
+            width: 100%;
+        }
+        .collection-slider-grid {
+            width: 75%;
+        }
+    }
+{% endstyle %}
+<section class="collection-slider">
+    <div class="collection-slider-container page-width">
+        <div class="collection-slider-content" style="text-align: {{ section.settings.text_alignment }};">
+            {% if section.settings.heading != blank %} <h2 style="color:{{ section.settings.heading_color }};" class="heading-all collection-heading h1"> {{ section.settings.heading }} </h2> {% endif %}
+            {% if section.settings.subheading != blank %} <p style="color:{{ section.settings.subheading_color }};" class="description collection-description">{{ section.settings.subheading }}</p> {% endif %}
+        </div>
+        <div class="collection-slider-grid-products">
+        {%- for product in section.settings.collection.products limit: 8 -%}
+            <li class="collection-slider-grid">
+              {% render 'card-product',
+                card_product: product,
+                media_aspect_ratio: "adapt",
+                image_shape: "default",
+                show_secondary_image: true,
+                show_vendor: false,
+                show_rating: true,
+                show_quick_add: true,
+                section_id: section.id
+              %}
+            </li>
+            {%- endfor -%}
+        </div>
+        <div class="collection__view-all" style="text-align: {{ section.settings.text_alignment }};">
+            <a
+              style="color:{{ section.settings.button_text_color }}; background: {{ section.settings.button_background_color }}"
+              href="{{ section.settings.collection.url }}"
+              class="collection-button button-y button button--primary"
+              aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
+            >
+              {{ section.settings.button_text }}
+            </a>
+          </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Collection Slider",  
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Sub Heading"
+        },
+        {
+            "type": "select",
+            "id": "text_alignment",
+            "options": [
+              {
+                "value": "Left",
+                "label": "Left"
+              },
+              {
+                "value": "Center",
+                "label": "Center"
+              },
+              {
+                "value": "Right",
+                "label": "Right"
+              }
+            ],
+            "default": "Center",
+            "label": "Text Alignment"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text"
+          },
+          {
+            "type": "header",
+            "content": "Color Area"
+          },
+          {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color"
+          },
+          {
+            "type": "color",
+            "id": "subheading_color",
+            "label": "Sub Heading Color"
+          },
+          {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button Text Color"
+          },
+          {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button Background Color"
+          },
+          {
+            "type": "color",
+            "id": "button_text_color_add",
+            "label": "Add Cart Button Text Color"
+          },
+          {
+            "type": "color",
+            "id": "button_background_color_add",
+            "label": "Add Cart Button Background Color"
+          },
+          {
+            "type": "header",
+            "content": "Padding Area"
+          },
+          {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 80
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 80
+          },
+          {
+            "type": "range",
+            "id": "padding_top_tablet",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Tablet Padding Top",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom_tablet",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Tablet Padding Bottom",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Mobile Padding Top",
+            "default": 30
+          },
+          {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "label": "Mobile Padding Bottom",
+            "default": 30
+          }
+
+    ],
+    "presets": [
+        {
+            "name": "Collection Slider",
+            "category": "Column"
+        }
+    ]
+} 
+{% endschema %}

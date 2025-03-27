@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "blog_banner_7FnQRC": {
+      "type": "blog-banner",
+      "settings": {
+        "image_background": "shopify:\/\/shop_images\/Rectangle_20_1.png",
+        "show_collection_breadcrumbs": true,
+        "background_color": "",
+        "heading_color": "#ffffff",
+        "margin_bottom": 80,
+        "margin_bottom_tablet": 50,
+        "margin_bottom_mobile": 30
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "blog_banner_7FnQRC",
+    "main"
+  ]
+}
