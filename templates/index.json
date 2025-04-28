@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner_slider_hcRWdK": {
@@ -6,12 +15,10 @@
         "banner_slider_CUbtcR": {
           "type": "banner_slider",
           "settings": {
-            "image_background": "shopify:\/\/shop_images\/Frame_1000003438.png",
             "heading": "Automate Your  Books of Accounts  & Tax Computations",
             "description": "Input your data in the spreadsheet’s General Journal, General Ledger, Cash Receipts Journal, Cash Disbursement Journal, Subsidiary Sales Journal, Subsidiary Purchase Journal. Ready to copy on your manual books of accounts!",
             "button_text": "SHOP NOW!",
-            "button_url": "shopify:\/\/collections\/templates",
-            "column_image": "shopify:\/\/shop_images\/Group_1000002860.png",
+            "button_url": "shopify://collections/templates",
             "column_alignment": "Left",
             "image_alignment": "Right",
             "background_color": "#0e035f",
@@ -24,12 +31,10 @@
         "banner_slider_KL434n": {
           "type": "banner_slider",
           "settings": {
-            "image_background": "shopify:\/\/shop_images\/Frame_1000003438.png",
             "heading": "Learn How To File Your Taxes & Comply On Your Own",
             "description": "Review recorded video meetings and join our exclusive group chat for interaction",
             "button_text": "SEE SCHEDULES!",
-            "button_url": "shopify:\/\/collections\/webinars",
-            "column_image": "shopify:\/\/shop_images\/Group_1000002860.png",
+            "button_url": "shopify://collections/webinars",
             "column_alignment": "Left",
             "image_alignment": "Left",
             "background_color": "#0e035f",
@@ -63,7 +68,7 @@
         "text_PXNNTc": {
           "type": "text",
           "settings": {
-            "text": "<p>This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized, we’ll replace this placeholder text with your real content.<\/p><p>Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.<\/p>",
+            "text": "<p>This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized, we’ll replace this placeholder text with your real content.</p><p>Sometimes it’s nice to put in text just to get an idea of how text will fill in a space on your website.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
@@ -72,7 +77,7 @@
           "type": "button",
           "settings": {
             "button_label": "LEARN MORE!",
-            "button_link": "shopify:\/\/pages\/contact",
+            "button_link": "shopify://pages/contact",
             "button_style_secondary": false,
             "button_text_color": "#000000",
             "button_background_color": "#fbc60a"
@@ -85,7 +90,6 @@
         "button_wJAPUz"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Group_5s.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -140,7 +144,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -149,7 +153,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -158,7 +162,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -216,9 +220,6 @@
         "column_kqKpKA": {
           "type": "column",
           "settings": {
-            "column_image": "shopify:\/\/shop_images\/DTI_Services.png",
-            "icon_image": "shopify:\/\/shop_images\/Group_1000002851.png",
-            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_3.png",
             "column_title": "DTI Services",
             "column_link": "",
             "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
@@ -231,9 +232,6 @@
         "column_QEETWr": {
           "type": "column",
           "settings": {
-            "column_image": "shopify:\/\/shop_images\/BIR_Registration.png",
-            "icon_image": "shopify:\/\/shop_images\/Group_1000002851_1.png",
-            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_4.png",
             "column_title": "BIR Registration",
             "column_link": "",
             "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
@@ -246,9 +244,6 @@
         "column_8EU6pq": {
           "type": "column",
           "settings": {
-            "column_image": "shopify:\/\/shop_images\/Bookkeeping.png",
-            "icon_image": "shopify:\/\/shop_images\/Group_1000002851_2.png",
-            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_5.png",
             "column_title": "Bookkeeping",
             "column_link": "",
             "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
@@ -261,9 +256,6 @@
         "column_rEdncW": {
           "type": "column",
           "settings": {
-            "column_image": "shopify:\/\/shop_images\/Tax_Compliance.png",
-            "icon_image": "shopify:\/\/shop_images\/Group_42.png",
-            "icon_image2": "shopify:\/\/shop_images\/Group_1000002851_6.png",
             "column_title": "Tax Compliance",
             "column_link": "",
             "description": "This is just placeholder text. Don’t be alarmed, this is just here to fill up space.",
@@ -364,8 +356,6 @@
         "text_aXnaFe"
       ],
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/Rectangle_4674.png",
-        "icon": "shopify:\/\/shop_images\/bxs_quote-right.png",
         "Heading": "Testimonials",
         "subheading": "",
         "text_alignment": "Center",
@@ -406,7 +396,6 @@
     "cta_section_HdqQC3": {
       "type": "cta-section",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/Frame_1000006849.png",
         "heading": "Reserve Your Consultation and Take the First Step",
         "subheading": "",
         "button_text": "BOOK A SCHEDULE",
@@ -492,6 +481,108 @@
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 30
       }
+    },
+    "multi_column_content_8nX8yP": {
+      "type": "multi-column-content",
+      "blocks": {
+        "column_ydJEzr": {
+          "type": "column",
+          "settings": {
+            "padding_top": 20,
+            "padding_right": 20,
+            "padding_bottom": 20,
+            "padding_left": 20,
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0,
+            "background_color": "",
+            "heading": "Column heading",
+            "sub_heading": "Column sub-heading",
+            "description": "<p>Column description</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "color_scheme": "background-1"
+          }
+        },
+        "column_bjzRQQ": {
+          "type": "column",
+          "settings": {
+            "padding_top": 20,
+            "padding_right": 20,
+            "padding_bottom": 20,
+            "padding_left": 20,
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0,
+            "background_color": "",
+            "heading": "Column heading",
+            "sub_heading": "Column sub-heading",
+            "description": "<p>Column description</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "color_scheme": "background-1"
+          }
+        },
+        "column_PyC4tC": {
+          "type": "column",
+          "settings": {
+            "padding_top": 20,
+            "padding_right": 20,
+            "padding_bottom": 20,
+            "padding_left": 20,
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0,
+            "background_color": "",
+            "heading": "Column heading",
+            "sub_heading": "Column sub-heading",
+            "description": "<p>Column description</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "color_scheme": "background-1"
+          }
+        },
+        "column_mMkD4M": {
+          "type": "column",
+          "settings": {
+            "padding_top": 20,
+            "padding_right": 20,
+            "padding_bottom": 20,
+            "padding_left": 20,
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0,
+            "background_color": "",
+            "heading": "Column heading",
+            "sub_heading": "Column sub-heading",
+            "description": "<p>Column description</p>",
+            "button_label": "Button label",
+            "button_link": "",
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "column_ydJEzr",
+        "column_bjzRQQ",
+        "column_PyC4tC",
+        "column_mMkD4M"
+      ],
+      "name": "Multi Column Content",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "background_color": "#2dd21f",
+        "color_scheme": "background-1",
+        "columns_desktop": 3,
+        "columns_mobile": "1"
+      }
     }
   },
   "order": [
@@ -505,6 +596,7 @@
     "testimonials_slider_7JHiTY",
     "featured_blog_cei44X",
     "cta_section_HdqQC3",
-    "faq_section_rJWQ6E"
+    "faq_section_rJWQ6E",
+    "multi_column_content_8nX8yP"
   ]
 }
