@@ -14,6 +14,9 @@
   #shopify-section-{{ section.id }} {
     margin-top: {{ section.settings.margin_top }}px;
     margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+
+  #shopify-section-{{ section.id }} .section-background {
     {% if section.settings.background_color != blank %}
       background-color: {{ section.settings.background_color }};
     {% endif %}
@@ -26,45 +29,47 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="section-{{ section.id }}-padding">
-    <div class="page-width">
-      <div class="grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
-        {%- for block in section.blocks -%}
-          <div class="grid__item" {{ block.shopify_attributes }}>
-            <div class="column-content color-{{ block.settings.color_scheme }} gradient"
-              style="
-                padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
-                margin: {{ block.settings.margin_top }}px {{ block.settings.margin_right }}px {{ block.settings.margin_bottom }}px {{ block.settings.margin_left }}px;
-                {% if block.settings.background_color != blank %}
-                  background-color: {{ block.settings.background_color }};
-                {% endif %}
-                {% if block.settings.background_image != blank %}
-                  background-image: url({{ block.settings.background_image | image_url }});
-                  background-size: cover;
-                  background-position: center;
-                {% endif %}
-              "
-            >
-              {%- if block.settings.heading != blank -%}
-                <h2 class="h2">{{ block.settings.heading }}</h2>
-              {%- endif -%}
-              
-              {%- if block.settings.sub_heading != blank -%}
-                <h3 class="h3">{{ block.settings.sub_heading }}</h3>
-              {%- endif -%}
-              
-              {%- if block.settings.description != blank -%}
-                <div class="rte">{{ block.settings.description }}</div>
-              {%- endif -%}
-              
-              {%- if block.settings.button_label != blank -%}
-                <a href="{{ block.settings.button_link }}" class="button button--primary">
-                  {{ block.settings.button_label | escape }}
-                </a>
-              {%- endif -%}
+  <div class="section-background">
+    <div class="section-{{ section.id }}-padding">
+      <div class="page-width">
+        <div class="grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
+          {%- for block in section.blocks -%}
+            <div class="grid__item" {{ block.shopify_attributes }}>
+              <div class="column-content color-{{ block.settings.color_scheme }} gradient"
+                style="
+                  padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
+                  margin: {{ block.settings.margin_top }}px {{ block.settings.margin_right }}px {{ block.settings.margin_bottom }}px {{ block.settings.margin_left }}px;
+                  {% if block.settings.background_color != blank %}
+                    background-color: {{ block.settings.background_color }};
+                  {% endif %}
+                  {% if block.settings.background_image != blank %}
+                    background-image: url({{ block.settings.background_image | image_url }});
+                    background-size: cover;
+                    background-position: center;
+                  {% endif %}
+                "
+              >
+                {%- if block.settings.heading != blank -%}
+                  <h2 class="h2">{{ block.settings.heading }}</h2>
+                {%- endif -%}
+                
+                {%- if block.settings.sub_heading != blank -%}
+                  <h3 class="h3">{{ block.settings.sub_heading }}</h3>
+                {%- endif -%}
+                
+                {%- if block.settings.description != blank -%}
+                  <div class="rte">{{ block.settings.description }}</div>
+                {%- endif -%}
+                
+                {%- if block.settings.button_label != blank -%}
+                  <a href="{{ block.settings.button_link }}" class="button button--primary">
+                    {{ block.settings.button_label | escape }}
+                  </a>
+                {%- endif -%}
+              </div>
             </div>
-          </div>
-        {%- endfor -%}
+          {%- endfor -%}
+        </div>
       </div>
     </div>
   </div>
