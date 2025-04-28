@@ -26,6 +26,29 @@
       background-position: center;
     {% endif %}
   }
+
+  {% for block in section.blocks %}
+    #shopify-section-{{ section.id }} .column-content-{{ block.id }} .column-heading {
+      color: {{ block.settings.heading_color }};
+      font-family: {{ block.settings.heading_font_family }};
+    }
+
+    #shopify-section-{{ section.id }} .column-content-{{ block.id }} .column-sub-heading {
+      color: {{ block.settings.sub_heading_color }};
+      font-family: {{ block.settings.sub_heading_font_family }};
+    }
+
+    #shopify-section-{{ section.id }} .column-content-{{ block.id }} .column-description {
+      color: {{ block.settings.description_color }};
+      font-family: {{ block.settings.description_font_family }};
+    }
+
+    #shopify-section-{{ section.id }} .column-content-{{ block.id }} .column-button {
+      color: {{ block.settings.button_text_color }};
+      background-color: {{ block.settings.button_background_color }};
+      font-family: {{ block.settings.button_font_family }};
+    }
+  {% endfor %}
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -35,7 +58,7 @@
         <div class="grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
           {%- for block in section.blocks -%}
             <div class="grid__item" {{ block.shopify_attributes }}>
-              <div class="column-content color-{{ block.settings.color_scheme }} gradient"
+              <div class="column-content column-content-{{ block.id }} color-{{ block.settings.color_scheme }} gradient"
                 style="
                   padding: {{ block.settings.padding_top }}px {{ block.settings.padding_right }}px {{ block.settings.padding_bottom }}px {{ block.settings.padding_left }}px;
                   margin: {{ block.settings.margin_top }}px {{ block.settings.margin_right }}px {{ block.settings.margin_bottom }}px {{ block.settings.margin_left }}px;
@@ -50,19 +73,19 @@
                 "
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="h2">{{ block.settings.heading }}</h2>
+                  <h2 class="h2 column-heading">{{ block.settings.heading }}</h2>
                 {%- endif -%}
                 
                 {%- if block.settings.sub_heading != blank -%}
-                  <h3 class="h3">{{ block.settings.sub_heading }}</h3>
+                  <h3 class="h3 column-sub-heading">{{ block.settings.sub_heading }}</h3>
                 {%- endif -%}
                 
                 {%- if block.settings.description != blank -%}
-                  <div class="rte">{{ block.settings.description }}</div>
+                  <div class="rte column-description">{{ block.settings.description }}</div>
                 {%- endif -%}
                 
                 {%- if block.settings.button_label != blank -%}
-                  <a href="{{ block.settings.button_link }}" class="button button--primary">
+                  <a href="{{ block.settings.button_link }}" class="button button--primary column-button">
                     {{ block.settings.button_label | escape }}
                   </a>
                 {%- endif -%}
@@ -279,16 +302,118 @@
           "label": "Heading"
         },
         {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading color",
+          "default": "#000000"
+        },
+        {
+          "type": "select",
+          "id": "heading_font_family",
+          "label": "Heading font family",
+          "options": [
+            {
+              "value": "inherit",
+              "label": "Inherit"
+            },
+            {
+              "value": "Arial, sans-serif",
+              "label": "Arial"
+            },
+            {
+              "value": "Helvetica, sans-serif",
+              "label": "Helvetica"
+            },
+            {
+              "value": "Georgia, serif",
+              "label": "Georgia"
+            },
+            {
+              "value": "Times New Roman, serif",
+              "label": "Times New Roman"
+            }
+          ],
+          "default": "inherit"
+        },
+        {
           "type": "text",
           "id": "sub_heading",
           "default": "Column sub-heading",
           "label": "Sub-heading"
         },
         {
+          "type": "color",
+          "id": "sub_heading_color",
+          "label": "Sub-heading color",
+          "default": "#000000"
+        },
+        {
+          "type": "select",
+          "id": "sub_heading_font_family",
+          "label": "Sub-heading font family",
+          "options": [
+            {
+              "value": "inherit",
+              "label": "Inherit"
+            },
+            {
+              "value": "Arial, sans-serif",
+              "label": "Arial"
+            },
+            {
+              "value": "Helvetica, sans-serif",
+              "label": "Helvetica"
+            },
+            {
+              "value": "Georgia, serif",
+              "label": "Georgia"
+            },
+            {
+              "value": "Times New Roman, serif",
+              "label": "Times New Roman"
+            }
+          ],
+          "default": "inherit"
+        },
+        {
           "type": "richtext",
           "id": "description",
           "default": "<p>Column description</p>",
           "label": "Description"
+        },
+        {
+          "type": "color",
+          "id": "description_color",
+          "label": "Description color",
+          "default": "#000000"
+        },
+        {
+          "type": "select",
+          "id": "description_font_family",
+          "label": "Description font family",
+          "options": [
+            {
+              "value": "inherit",
+              "label": "Inherit"
+            },
+            {
+              "value": "Arial, sans-serif",
+              "label": "Arial"
+            },
+            {
+              "value": "Helvetica, sans-serif",
+              "label": "Helvetica"
+            },
+            {
+              "value": "Georgia, serif",
+              "label": "Georgia"
+            },
+            {
+              "value": "Times New Roman, serif",
+              "label": "Times New Roman"
+            }
+          ],
+          "default": "inherit"
         },
         {
           "type": "text",
@@ -300,6 +425,46 @@
           "type": "url",
           "id": "button_link",
           "label": "Button link"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button background color",
+          "default": "#000000"
+        },
+        {
+          "type": "select",
+          "id": "button_font_family",
+          "label": "Button font family",
+          "options": [
+            {
+              "value": "inherit",
+              "label": "Inherit"
+            },
+            {
+              "value": "Arial, sans-serif",
+              "label": "Arial"
+            },
+            {
+              "value": "Helvetica, sans-serif",
+              "label": "Helvetica"
+            },
+            {
+              "value": "Georgia, serif",
+              "label": "Georgia"
+            },
+            {
+              "value": "Times New Roman, serif",
+              "label": "Times New Roman"
+            }
+          ],
+          "default": "inherit"
         },
         {
           "type": "select",
